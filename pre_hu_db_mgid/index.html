@@ -1,160 +1,267 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l=':'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Egészség és Jólét: A Rejtett Igazság a Vércukorszintről, Amit az Orvosok NEM Akarnak Elmondani!</title>
+    <title>Egészség Ma | A Cukorbetegség Valódi Oka, Amelyet El Akartak Titkolni</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.7;
+            font-size: 17px;
         }
         .advertorial-bar {
-            background-color: #f8f9fa;
-            color: #6c757d;
+            background-color: #2c3e50;
+            color: #fff;
             text-align: center;
-            padding: 5px 0;
-            font-size: 12px;
-            font-family: Arial, sans-serif;
-            border-bottom: 1px solid #dee2e6;
+            padding: 10px 0;
+            font-size: 0.85em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .container {
-            width: 90%;
-            max-width: 800px;
+            max-width: 780px;
             margin: 20px auto;
             background-color: #fff;
-            padding: 20px;
+            padding: 32px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
-        h1, h2, h3 {
-            color: #0056b3;
-        }
-        .header {
+        h1 {
+            color: #d32f2f;
+            font-size: 1.95em;
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 12px;
+            line-height: 1.25;
         }
-        .header img {
-            max-width: 100%;
+        .deck {
+            font-size: 1.05em;
+            color: #444;
+            border-left: 4px solid #d32f2f;
+            padding-left: 14px;
+            margin: 12px 0 20px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        .author-box {
+            background-color: #f9f9f9;
+            padding: 13px 15px;
+            border-left: 4px solid #2c3e50;
+            margin-bottom: 22px;
+            font-size: 0.88em;
+            color: #555;
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-top: 28px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 14px;
+        }
+        p { margin-bottom: 16px; }
+        .image-link {
+            display: block;
+            text-align: center;
+            margin: 22px 0;
+            transition: transform 0.2s ease;
+        }
+        .image-link:hover { transform: scale(1.02); }
+        .hero-image {
+            width: 100%;
+            max-width: 700px;
             height: auto;
-            border: 3px dashed #28a745; /* Green dashed border */
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
         }
+        .pull-quote {
+            border-top: 2px solid #1a1a1a;
+            border-bottom: 2px solid #1a1a1a;
+            margin: 26px 0;
+            padding: 16px 20px;
+            font-size: 1.15em;
+            font-style: italic;
+            color: #1a1a1a;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .danger-box {
+            background-color: #fff5f5;
+            border: 1px solid #ffcccc;
+            border-left: 5px solid #d32f2f;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-size: 1em;
+            line-height: 1.65;
+        }
+        .danger-box strong { color: #d32f2f; }
+        .highlight-box {
+            background-color: #fffbea;
+            border: 1px solid #e8c900;
+            border-left: 5px solid #FFD700;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-size: 1em;
+            line-height: 1.65;
+        }
+        .highlight-box strong { color: #7a5c00; }
         .cta-button {
             display: block;
-            width: fit-content;
-            margin: 20px auto;
-            padding: 15px 30px;
-            background-color: #FFD700; /* Golden color */
-            color: #333;
+            width: 90%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px 20px;
+            background: linear-gradient(to bottom, #FFD700, #FFA500);
+            color: #000;
             text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 5px;
+            font-size: 1.3em;
+            font-weight: 900;
+            border-radius: 8px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            border: 2px solid #e69500;
+            animation: pulse 2s infinite;
+            line-height: 1.3;
         }
         .cta-button:hover {
-            background-color: #e6c200;
+            background: linear-gradient(to bottom, #FFA500, #FF8C00);
+            transform: translateY(-2px);
         }
-        .content img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border: 3px dashed #28a745; /* Green dashed border */
-            border-radius: 8px;
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        .cta-sub {
+            text-align: center;
+            font-size: 0.82em;
+            color: #888;
+            margin-top: 8px;
         }
         .footer {
+            background-color: #222;
+            color: #aaa;
             text-align: center;
-            padding-top: 20px;
-            margin-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.8em;
-            color: #666;
+            padding: 36px 20px;
+            font-size: 0.82em;
+            margin-top: 40px;
         }
-        .disclaimer {
-            font-size: 0.7em;
-            color: #999;
-            margin-top: 10px;
+        .footer-content { max-width: 780px; margin: 0 auto; }
+        .disclaimer-box {
+            border: 1px solid #444;
+            padding: 14px;
+            margin-bottom: 18px;
             text-align: justify;
+            font-size: 0.8em;
+            line-height: 1.4;
+            background-color: #1a1a1a;
         }
-        a {
-            color: #0056b3;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        .footer a { color: #ddd; text-decoration: none; margin: 0 10px; }
+        .footer a:hover { text-decoration: underline; color: #fff; }
+        .company-info { margin-top: 18px; font-weight: bold; color: #ccc; }
+        @media (max-width: 600px) {
+            .container { margin: 0; padding: 16px; border-radius: 0; }
+            h1 { font-size: 1.55em; }
+            .cta-button { font-size: 1.1em; width: 100%; }
         }
     </style>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Facebook Pixel Code (noscript) -->
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code (noscript) -->
 
-    <div class="advertorial-bar">
-        ADVERTORIAL &nbsp;|&nbsp; Szponzorált Tartalom
+<div class="advertorial-bar">
+    ADVERTORIÁL | SZPONZORÁLT TARTALOM
+</div>
+
+<div class="container">
+
+    <h1>Az Orvos, Aki Elvesztette Engedélyét, Mert Felfedte Pácienseinek a 2-es Típusú Cukorbetegség Valódi Okát</h1>
+
+    <div class="deck">
+        Egy sokkoló felfedezés kering Magyarország-szerte. A gyógyszeripar mindent megtett, hogy eltörölje. De most itt van — és amit a videóban lát, örökre megváltoztatja, ahogy a cukorbetegségre tekint.
     </div>
 
-    <div class="container">
-        <div class="header">
-            <h1>Egészség és Jólét: A Rejtett Igazság a Vércukorszintről, Amit az Orvosok NEM Akarnak Elmondani!</h1>
-            <a href="https://lp.hyperelitedigital.shop/preclick" target="_blank">
-                <img src="img/diabetes_mechanism_hu_v19_hero.png" alt="Rejtélyes mechanizmus természetes olajjal">
-            </a>
-            <a href="https://lp.hyperelitedigital.shop/preclick" target="_blank" class="cta-button">KATTINTSON IDE ÉS FEDEZZE FEL A CUKORSZINT STABILIZÁLÁSÁNAK TITKÁT!</a>
-        </div>
-
-        <div class="content">
-            <h2>Elege van a Vércukorszint Állandó Ellenőrzéséből? Létezik Megoldás, Amit Elhallgattak Ön Elől!</h2>
-            <p>Évekig azt mondták Önnek, hogy el kell fogadnia az állapotát, minden étkezést ellenőriznie kell, és állandó félelemben kell élnie a cukorszint ingadozásától. De mi van, ha azt mondom, hogy létezik egy **ősi, természetes mechanizmus**, amelyet magyar tudósok fedeztek fel újra, és amely segíthet testének visszanyerni elvesztett egyensúlyát? Egy titok, amelyet a modern orvostudomány figyelmen kívül hagyott, de most végre elérhető.</p>
-            <p>Képzelje el, hogy minden reggel energiával ébred, szellemi köd nélkül, és szabadon élvezheti kedvenc ételeit bűntudat nélkül. Ez nem elérhetetlen álom, hanem konkrét lehetőség több ezer ember számára, akik már felfedezték ezt a módszert. Itt az ideje, hogy visszavegye az irányítást élete és egészsége felett.</p>
-
-            <a href="https://lp.hyperelitedigital.shop/preclick" target="_blank">
-                <img src="img/diabetes_secret_hu_v19.png" alt="Idős ember keze rejtélyes tárgyat tart">
-            </a>
-
-            <h2>Az "Arany Folyadék", Amely Forradalmasíthatja Anyagcseréjét</h2>
-            <p>Ennek a hihetetlen felfedezésnek a középpontjában egy természetes elem, egy igazi "Arany Folyadék" áll, amelynek létezése generációkon át öröklődött. Ez nem gyógyszer, nincs mellékhatása, és nem igényel kimerítő diétákat. Ez az esszencia, ha helyesen használják, közvetlenül a sejtekre hat, újraaktiválja azok képességét a cukor hatékony feldolgozására és javítja az érzékenységet.</p>
-            <p>Független tanulmányok kimutatták, hogy ez az "Arany Folyadék" segíthet stabilizálni a vércukorszintet, csökkenteni az inzulinrezisztenciát és javítani az általános egészségi állapotot. Mintha a teste "lökést" kapna, hogy újra úgy működjön, ahogy kell, lehetővé téve, hogy teljesebb életet éljen anélkül, hogy az eddig rákényszerített korlátozásokkal kellene élnie.</p>
-
-            <h2>Ne Engedje, Hogy Azt Mondják, Nincs Remény!</h2>
-            <p>Ha elege van az üres ígéretekből és az ideiglenes megoldásokból, ha végre meg akarja oldani a probléma gyökerét, és nem csak a tüneteket, akkor ismernie kell ezt a titkot. Ne hagyja, hogy kora vagy állapota határozza meg. Megérdemli, hogy vitalitással, energiával és szabadsággal teli életet éljen, és élvezze annak minden pillanatát.</p>
-            <p>Ez az Ön lehetősége, hogy felfedezze az igazságot. Kattintson az alábbi gombra, és hozzáférhet egy exkluzív videóhoz, amely minden részletet feltár arról, hogyan alakíthatja át ez az "Arany Folyadék" az egészségét, és adhatja vissza azt a szabadságot, amelyet azt hitte, örökre elveszített. Ne várja meg, amíg túl késő lesz!</p>
-
-            <a href="https://lp.hyperelitedigital.shop/preclick" target="_blank" class="cta-button">KATTINTSON IDE ÉS FEDEZZE FEL A STABIL CUKORSZINT ÉS TÖBB ENERGIA TITKÁT!</a>
-        </div>
-
-        <div class="footer">
-            <p>&copy; 2024 Egészség és Jólét. Minden jog fenntartva.</p>
-            <p>J.R. SUPLEMENTOS LTDA - ME | CNPJ: 65.197.852/0001-66</p>
-            <p>Avenida Paulista, 1000 - Bela Vista, São Paulo - SP, Brazília</p>
-            <p><a href="privacy.html">Adatvédelmi Szabályzat</a> | <a href="terms.html">Felhasználási Feltételek</a></p>
-            <div class="disclaimer">
-                <p>Jogi nyilatkozat: Az ezen az oldalon található információk kizárólag tájékoztató jellegűek, és nem helyettesítik a szakmai orvosi tanácsot. Mindig konzultáljon orvosával vagy képzett egészségügyi szakemberrel bármilyen egészségügyi kérdés vagy aggodalom esetén. Az egyéni eredmények eltérőek lehetnek. Ez a termék nem alkalmas betegségek diagnosztizálására, kezelésére, gyógyítására vagy megelőzésére.</p>
-            </div>
-        </div>
+    <div class="author-box">
+        <strong>Közzétéve:</strong> Ma &nbsp;|&nbsp; <strong>Egészség Ma Szerkesztőség</strong> &nbsp;|&nbsp; Olvasási idő: 2 perc
     </div>
-<script type="text/javascript" src="https://lp.hyperelitedigital.shop/pretrack.js?rtkcmpid=6a342ce8c8efd67aaef739d6"></script>
+
+    <a href="https://lp.hyperelitedigital.shop/preclick" class="image-link">
+        <img src="./img/herodb.webp" alt="A cukorbetegség valódi oka" class="hero-image">
+    </a>
+
+    <p>Minden reggel felébred, és az első gondolata a vércukorszintje. Metformin. Inzulin. A tiltott ételek listája, amely egyre hosszabb. A lábak, amelyek zsibbadnak éjszaka. A szemek, amelyek egyre gyengébben látnak. És az a csendes félelem — nem a haláltól, hanem attól a naptól, amikor már nem tud egyedül intézni semmit.</p>
+
+    <p>Évek óta mondják Önnek, hogy ez az állapot kezelhetetlen. Hogy el kell fogadnia. Hogy a gyógyszerek az egyetlen út. <strong>De mi van, ha mindenki tévedett — beleértve az orvosát is?</strong></p>
+
+    <div class="danger-box">
+        <strong>⚠ Amit az orvosa soha nem mondott el Önnek:</strong> Két világhírű orvos — akiknek a nevét a gyógyszeripar törölte az internetről — felfedezett valamit, ami megrázta az orvosi közösséget. A 2-es típusú cukorbetegség valódi oka teljesen más, mint amit gondolt. És a felfedezésük miatt azonnal elhallgattatták őket.
+    </div>
+
+    <h2>A Felfedezés, Amelyet Törölni Próbáltak</h2>
+
+    <p>Amikor ez a két orvos megosztotta felfedezését a nyilvánossággal, a reakció azonnali volt. Videóikat eltávolították. Fiókjaikat törölték. Ügyvédek keresték fel őket. A nagy gyógyszeripari vállalatok mindent megtettek, hogy ez az információ ne terjedjen el.</p>
+
+    <p>Miért ekkora pánik? Mert ha az emberek tudnák az igazságot, senki sem vásárolna metformint, inzulint vagy azokat a drága gyógyszereket, amelyek csak a tüneteket kezelik — az okot soha nem.</p>
+
+    <div class="pull-quote">
+        "Elveszítettük az engedélyünket. Kitörölték a videóinkat. De az igazságot már nem lehet visszacsinálni."
+    </div>
+
+    <a href="https://lp.hyperelitedigital.shop/preclick" class="image-link">
+        <img src="./img/db2.webp" alt="A valódi ok és a megoldás" class="hero-image">
+    </a>
+
+    <h2>Mit Tartalmaz Pontosan a Videó?</h2>
+
+    <p>Mielőtt végleg elhallgattatták volna őket, a két orvos rögzített egy részletes videót. Ebben elmagyarázzák a 2-es típusú cukorbetegség valódi okát — amely sokkolóan más, mint amit gondolt — és azt a meglepően egyszerű természetes megoldást, amelyet generációk óta alkalmaznak egy helyen, ahol a cukorbetegség szinte ismeretlen fogalom.</p>
+
+    <div class="highlight-box">
+        <strong>Mit talál a videóban?</strong> A valódi ok teljes magyarázatát. A természetes megoldást, amelyet a gyógyszergyárak el akartak temetni. És azt, hogyan alkalmazhatja még ma — otthon, recept nélkül, orvosi beavatkozás nélkül.
+    </div>
+
+    <div class="danger-box">
+        <strong>⚠ Figyelmeztetés:</strong> A videó olyan információkat tartalmaz, amelyeket a gyógyszeripar nem szeretne, hogy Ön lásson. Már többször megpróbálták eltávolítani. Ha most itt van — nézze meg azonnal. Ne halassza holnapra.
+    </div>
+
+    <a href="https://lp.hyperelitedigital.shop/preclick" class="cta-button">
+        ▶ NÉZZE MEG A VIDEÓT MOST
+    </a>
+    <p class="cta-sub">Ingyenes hozzáférés · Korlátozott ideig elérhető</p>
+
+</div>
+
+<div class="footer">
+    <div class="footer-content">
+        <div class="disclaimer-box">
+            <strong>FONTOS FIGYELMEZTETÉS:</strong> Ez a weboldal nem része a Facebook weboldalának vagy a Facebook Inc.-nek. Ezt a weboldalt a Facebook SEMMILYEN módon nem támogatja. Ez a weboldal és annak tartalma kizárólag tájékoztató és oktatási célokat szolgál. Az itt található információk nem tekinthetők orvosi tanácsnak. Az eredmények esetenként eltérőek lehetnek és nem garantáltak. <strong>A cikkben bemutatott történet és személyek illusztratív célt szolgálnak.</strong> Mindig konzultáljon orvosával, mielőtt bármilyen új egészségügyi programot elkezdene.
+        </div>
+        <p>
+            <a href="./privacy.html">Adatvédelmi irányelvek</a> |
+            <a href="./terms.html">Felhasználási feltételek</a> |
+            <a href="mailto:contato@hyperelitedigital.com.br">Kapcsolat</a>
+        </p>
+        <div class="company-info">
+            FONTS NEXUS LTDA<br>
+            CNPJ: 67.232.158/0001-68<br>
+            Brasil
+        </div>
+        <p style="margin-top: 18px;">&copy; 2025 Egészség Ma. Minden jog fenntartva.</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://lp.hyperelitedigital.shop/pretrack.js?rtkcmpid=PLACEHOLDER_CAMPAIGN_ID"></script>
 </body>
 </html>
