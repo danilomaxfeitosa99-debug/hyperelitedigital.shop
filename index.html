@@ -1,1 +1,436 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salute Oggi | Notizie e Consigli per la Tua Salute</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f9f7;
+            color: #222;
+            font-size: 16px;
+            line-height: 1.7;
+        }
 
+        /* HEADER */
+        .site-header {
+            background-color: #fff;
+            border-bottom: 3px solid #d32f2f;
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+        }
+        .site-logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #d32f2f;
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+        .site-logo span { color: #222; }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 24px;
+            font-family: Arial, sans-serif;
+            font-size: 0.88em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover { color: #d32f2f; }
+
+        /* DATE BAR */
+        .date-bar {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            padding: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 0.78em;
+            color: #666;
+        }
+
+        /* HERO */
+        .hero-section {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        .hero-article { border-right: 1px solid #ddd; padding-right: 30px; }
+        .hero-article .category {
+            font-family: Arial, sans-serif;
+            font-size: 0.75em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #d32f2f;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .hero-article h1 {
+            font-size: 1.85em;
+            line-height: 1.2;
+            color: #111;
+            margin-bottom: 14px;
+        }
+        .hero-article .excerpt {
+            font-size: 1.05em;
+            color: #444;
+            margin-bottom: 16px;
+            border-left: 3px solid #d32f2f;
+            padding-left: 14px;
+            font-style: italic;
+        }
+        .hero-article p { margin-bottom: 14px; font-size: 0.97em; color: #333; }
+        .read-more {
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            font-size: 0.82em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #d32f2f;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+        .read-more:hover { background-color: #b71c1c; }
+
+        /* SIDEBAR */
+        .sidebar h3 {
+            font-family: Arial, sans-serif;
+            font-size: 0.78em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+            background-color: #2c3e50;
+            padding: 6px 12px;
+            margin-bottom: 16px;
+        }
+        .sidebar-item {
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #eee;
+        }
+        .sidebar-item .category {
+            font-family: Arial, sans-serif;
+            font-size: 0.72em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #d32f2f;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .sidebar-item h4 { font-size: 0.97em; line-height: 1.3; color: #111; }
+        .sidebar-item h4 a { text-decoration: none; color: #111; }
+        .sidebar-item h4 a:hover { color: #d32f2f; }
+        .sidebar-item .meta {
+            font-family: Arial, sans-serif;
+            font-size: 0.75em;
+            color: #999;
+            margin-top: 4px;
+        }
+
+        /* SECTIONS */
+        .section-header {
+            max-width: 1100px;
+            margin: 30px auto 16px;
+            padding: 0 20px;
+            border-bottom: 3px solid #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-header h2 {
+            font-family: Arial, sans-serif;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #fff;
+            background-color: #2c3e50;
+            padding: 6px 14px;
+        }
+
+        /* ARTICLE GRID */
+        .article-grid {
+            max-width: 1100px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .article-card { border-bottom: 2px solid #eee; padding-bottom: 16px; }
+        .article-card .category {
+            font-family: Arial, sans-serif;
+            font-size: 0.72em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #d32f2f;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .article-card h3 { font-size: 1em; line-height: 1.3; color: #111; margin-bottom: 8px; }
+        .article-card h3 a { text-decoration: none; color: #111; }
+        .article-card h3 a:hover { color: #d32f2f; }
+        .article-card p {
+            font-family: Arial, sans-serif;
+            font-size: 0.83em;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .article-card .meta {
+            font-family: Arial, sans-serif;
+            font-size: 0.75em;
+            color: #999;
+        }
+
+        /* FULL WIDTH FEATURE */
+        .feature-band {
+            background-color: #fff8e1;
+            border-top: 3px solid #FFD700;
+            border-bottom: 3px solid #FFD700;
+            padding: 30px 20px;
+            margin: 10px 0 30px;
+        }
+        .feature-band-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .feature-band .label {
+            font-family: Arial, sans-serif;
+            font-size: 0.75em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7a5c00;
+            margin-bottom: 8px;
+        }
+        .feature-band h2 {
+            font-size: 1.5em;
+            color: #111;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+        .feature-band p {
+            font-size: 0.95em;
+            color: #444;
+            max-width: 780px;
+            margin-bottom: 16px;
+        }
+        .feature-band a.read-more { background-color: #e6a000; }
+        .feature-band a.read-more:hover { background-color: #c88a00; }
+
+        /* FOOTER */
+        footer {
+            background-color: #1a1a1a;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            font-family: Arial, sans-serif;
+            font-size: 0.82em;
+        }
+        footer a { color: #ccc; text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: #fff; }
+        .footer-logo {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 12px;
+            display: block;
+            font-family: Georgia, serif;
+            text-decoration: none;
+        }
+        .footer-nav { margin: 12px 0; }
+
+        @media (max-width: 768px) {
+            .hero-section { grid-template-columns: 1fr; }
+            .hero-article { border-right: none; padding-right: 0; border-bottom: 1px solid #ddd; padding-bottom: 24px; }
+            .article-grid { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="site-logo">Salute<span>Oggi</span></a>
+        <nav>
+            <a href="#benessere">Benessere</a>
+            <a href="#nutrizione">Nutrizione</a>
+            <a href="#malattie">Malattie</a>
+            <a href="#prevenzione">Prevenzione</a>
+            <a href="#ricerca">Ricerca</a>
+        </nav>
+    </div>
+</header>
+
+<div class="date-bar">
+    Giovedì, 30 Luglio 2026 &nbsp;|&nbsp; Informazione indipendente sulla salute italiana
+</div>
+
+<!-- HERO -->
+<section class="hero-section" id="ricerca">
+    <article class="hero-article">
+        <div class="category">🔬 Ricerca Scientifica</div>
+        <h1>L'Olio Santo Citato 200 Volte nella Bibbia: i Ricercatori Scoprono Perché Aiuta il Pancreas a Funzionare Meglio</h1>
+        <p class="excerpt">Un olio usato per millenni nella medicina tradizionale mediorientale torna al centro della ricerca scientifica. Il collegamento con il diabete di tipo 2 è più forte di quanto si pensasse.</p>
+        <p>Per secoli, medici e guaritori del Medio Oriente hanno usato questo olio in modi che la medicina moderna aveva ignorato. Oggi, ricercatori che studiano le cause reali del diabete di tipo 2 hanno trovato qualcosa di sorprendente: le proprietà di questo olio agiscono esattamente sul meccanismo che i farmaci convenzionali non riescono a trattare.</p>
+        <p>La scoperta riguarda il pancreas — l'organo responsabile della produzione di insulina — e un processo infiammatorio cronico che la diagnostica di routine non cerca. Il video che sta circolando in tutta Italia spiega il collegamento in dettaglio, e perché questo rimedio naturale non può essere brevettato.</p>
+        <a href="./prevsl-mgid-db-it-oleosanto/" class="read-more">Guarda il Video Completo →</a>
+    </article>
+
+    <aside class="sidebar">
+        <h3>Più Letti Oggi</h3>
+
+        <div class="sidebar-item">
+            <div class="category">Malattie</div>
+            <h4><a href="#malattie">Glicemia alta: i 7 segnali che il corpo manda prima della diagnosi</a></h4>
+            <div class="meta">Oggi &nbsp;|&nbsp; 4 min di lettura</div>
+        </div>
+
+        <div class="sidebar-item">
+            <div class="category">Nutrizione</div>
+            <h4><a href="#nutrizione">Dieta e diabete: gli alimenti che alzano la glicemia senza che tu lo sappia</a></h4>
+            <div class="meta">Ieri &nbsp;|&nbsp; 3 min di lettura</div>
+        </div>
+
+        <div class="sidebar-item">
+            <div class="category">Prevenzione</div>
+            <h4><a href="#prevenzione">Pancreas infiammato: cause, sintomi e cosa fare subito</a></h4>
+            <div class="meta">2 giorni fa &nbsp;|&nbsp; 5 min di lettura</div>
+        </div>
+
+        <div class="sidebar-item">
+            <div class="category">Ricerca</div>
+            <h4><a href="#ricerca">Insulinoresistenza: cosa succede davvero nel corpo e perché peggiora nel tempo</a></h4>
+            <div class="meta">3 giorni fa &nbsp;|&nbsp; 4 min di lettura</div>
+        </div>
+    </aside>
+</section>
+
+<!-- FEATURE BAND -->
+<div class="feature-band">
+    <div class="feature-band-inner">
+        <div class="label">⭐ Articolo in Evidenza</div>
+        <h2>Il Rimedio Naturale che i Ricercatori Non Riescono a Spiegare con la Medicina Convenzionale</h2>
+        <p>Usato per millenni, ignorato per decenni, riscoperto oggi. Questo olio antico agisce su un meccanismo pancreatico che nessun farmaco riesce a raggiungere. Il video spiega tutto — incluso perché non ne hai mai sentito parlare dal tuo medico.</p>
+        <a href="./prevsl-mgid-db-it-oleosanto/" class="read-more">Scopri di Più →</a>
+    </div>
+</div>
+
+<!-- MALATTIE -->
+<div class="section-header" id="malattie">
+    <h2>Malattie &amp; Condizioni</h2>
+</div>
+<section class="article-grid">
+    <article class="article-card">
+        <div class="category">Diabete</div>
+        <h3><a href="./prevsl-mgid-db-it-oleosanto/">Diabete di tipo 2: la causa che i medici non cercano nelle analisi di routine</a></h3>
+        <p>Un processo infiammatorio cronico nel pancreas potrebbe spiegare perché molti pazienti non migliorano nonostante i farmaci.</p>
+        <div class="meta">Oggi &nbsp;|&nbsp; 3 min</div>
+    </article>
+
+    <article class="article-card">
+        <div class="category">Cuore</div>
+        <h3><a href="#malattie">Colesterolo: quando i valori "normali" possono ancora essere pericolosi</a></h3>
+        <p>I medici guardano solo ai numeri totali, ma il rapporto tra le frazioni conta molto di più per la salute cardiovascolare.</p>
+        <div class="meta">Ieri &nbsp;|&nbsp; 4 min</div>
+    </article>
+
+    <article class="article-card">
+        <div class="category">Pressione</div>
+        <h3><a href="#malattie">Ipertensione silente: i 5 segnali che molti ignorano prima dei 65 anni</a></h3>
+        <p>La pressione alta raramente fa male — finché non è troppo tardi. Questi segnali precoci possono fare la differenza.</p>
+        <div class="meta">2 giorni fa &nbsp;|&nbsp; 3 min</div>
+    </article>
+</section>
+
+<!-- NUTRIZIONE -->
+<div class="section-header" id="nutrizione">
+    <h2>Nutrizione</h2>
+</div>
+<section class="article-grid">
+    <article class="article-card">
+        <div class="category">Alimentazione</div>
+        <h3><a href="#nutrizione">I cibi che alzano la glicemia senza che tu lo sappia</a></h3>
+        <p>Non solo zucchero e dolci: alcuni alimenti considerati "sani" possono destabilizzare i livelli di insulina in modo sorprendente.</p>
+        <div class="meta">Oggi &nbsp;|&nbsp; 4 min</div>
+    </article>
+
+    <article class="article-card">
+        <div class="category">Oli e Grassi</div>
+        <h3><a href="./prevsl-mgid-db-it-oleosanto/">Olio d'oliva, olio di cocco, olio di lino: quale fa davvero bene al metabolismo</a></h3>
+        <p>Non tutti i grassi sono uguali. La ricerca più recente distingue nettamente tra oli che infiammano e oli che proteggono.</p>
+        <div class="meta">Ieri &nbsp;|&nbsp; 5 min</div>
+    </article>
+
+    <article class="article-card">
+        <div class="category">Digiuno</div>
+        <h3><a href="#nutrizione">Digiuno intermittente e diabete: cosa dice davvero la scienza nel 2026</a></h3>
+        <p>Molti diabetici lo provano senza sapere i rischi. Ecco cosa emerge dagli studi più recenti e quando può essere utile.</p>
+        <div class="meta">3 giorni fa &nbsp;|&nbsp; 4 min</div>
+    </article>
+</section>
+
+<!-- PREVENZIONE -->
+<div class="section-header" id="prevenzione">
+    <h2>Prevenzione</h2>
+</div>
+<section class="article-grid">
+    <article class="article-card">
+        <div class="category">Prevenzione</div>
+        <h3><a href="#prevenzione">Pancreas: come proteggerlo prima che si manifestino i sintomi</a></h3>
+        <p>Il pancreas lavora in silenzio per anni prima di dare segnali. Questi accorgimenti possono rallentare il deterioramento.</p>
+        <div class="meta">Oggi &nbsp;|&nbsp; 3 min</div>
+    </article>
+
+    <article class="article-card">
+        <div class="category">Stile di Vita</div>
+        <h3><a href="#prevenzione">Camminare 30 minuti al giorno: cosa cambia davvero nella glicemia</a></h3>
+        <p>L'attività fisica è prescritta a tutti i diabetici, ma pochi sanno esattamente come e perché agisce sull'insulina.</p>
+        <div class="meta">2 giorni fa &nbsp;|&nbsp; 3 min</div>
+    </article>
+
+    <article class="article-card">
+        <div class="category">Benessere</div>
+        <h3><a href="#benessere">Stress cronico e glicemia: il legame che i medici sottovalutano</a></h3>
+        <p>Il cortisolo prodotto dallo stress alza la glicemia in modo diretto. Ecco perché gestire lo stress è parte della terapia.</p>
+        <div class="meta">4 giorni fa &nbsp;|&nbsp; 4 min</div>
+    </article>
+</section>
+
+<footer id="benessere">
+    <a href="/" class="footer-logo">SaluteOggi</a>
+    <div class="footer-nav">
+        <a href="#ricerca">Ricerca</a> |
+        <a href="#malattie">Malattie</a> |
+        <a href="#nutrizione">Nutrizione</a> |
+        <a href="#prevenzione">Prevenzione</a> |
+        <a href="./privacy.html">Privacy</a> |
+        <a href="./terms.html">Termini</a> |
+        <a href="mailto:contato@hyperelitedigital.com.br">Contatto</a>
+    </div>
+    <p style="margin-top: 14px;">© 2026 Salute Oggi. Tutti i diritti riservati. Contenuto a scopo informativo ed educativo. Non sostituisce il parere medico.</p>
+</footer>
+
+</body>
+</html>
