@@ -182,6 +182,51 @@
             h1 { font-size: 1.55em; }
             .cta-button { font-size: 1.1em; width: 100%; }
         }
+
+        /* ===== ACCORDION (Privacy Policy / Contact Us) ===== */
+        .compliance-accordion {
+            max-width: 780px;
+            margin: 28px auto 0;
+            padding: 0;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+        .compliance-item {
+            border: 1px solid #444;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+        .compliance-header {
+            width: 100%;
+            text-align: left;
+            background: #2a2a2a;
+            border: none;
+            padding: 14px 18px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #ddd;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .compliance-header:hover { background: #333; }
+        .compliance-header .icon { font-size: 12px; transition: transform 0.2s; }
+        .compliance-header.active .icon { transform: rotate(180deg); }
+        .compliance-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease;
+            background: #161616;
+        }
+        .compliance-content-inner {
+            padding: 16px 18px;
+            font-size: 0.82em;
+            color: #aaa;
+            line-height: 1.6;
+        }
     </style>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -274,8 +319,62 @@
             Brasil
         </div>
         <p style="margin-top: 18px;">&copy; 2025 Salute Oggi. Tutti i diritti riservati.</p>
+
+        <!-- ===== ACCORDION INSERIDO AQUI ===== -->
+        <div class="compliance-accordion">
+
+            <div class="compliance-item">
+                <button class="compliance-header" onclick="toggleAccordion(this)">
+                    Informativa sulla Privacy
+                    <span class="icon">▼</span>
+                </button>
+                <div class="compliance-content">
+                    <div class="compliance-content-inner">
+                        <p><strong>Informativa sulla Privacy</strong></p>
+                        <p>Fonts Nexus LTDA rispetta la privacy dei visitatori di questo sito. Le informazioni raccolte tramite moduli, cookie o strumenti di tracciamento vengono utilizzate esclusivamente per finalità di marketing, analisi delle campagne e miglioramento dell'esperienza dell'utente.</p>
+                        <p>Non vendiamo né condividiamo dati personali con terze parti al di fuori dei nostri partner pubblicitari e di analisi necessari al funzionamento delle campagne. L'utente può richiedere in qualsiasi momento la rimozione dei propri dati contattandoci attraverso i canali indicati nella sezione Contatti.</p>
+                        <p>Questo sito utilizza cookie tecnici e di terze parti per il funzionamento delle campagne pubblicitarie. Continuando la navigazione, l'utente acconsente all'uso dei cookie secondo questa informativa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="compliance-item">
+                <button class="compliance-header" onclick="toggleAccordion(this)">
+                    Contatti
+                    <span class="icon">▼</span>
+                </button>
+                <div class="compliance-content">
+                    <div class="compliance-content-inner">
+                        <p><strong>Fonts Nexus LTDA</strong></p>
+                        <p>Email: contato@hyperelitedigital.com.br</p>
+                        <p>Indirizzo: Av. Dr. Jose Thomas D Avila Nabuco, 700, Apt 001 Bloco 08, Farolândia, Aracaju - SE, 49030-270, Brasile</p>
+                        <p>CNPJ: 67.232.158/0001-68</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ===== FIM DO ACCORDION ===== -->
+
     </div>
 </div>
+
+<script>
+  function toggleAccordion(btn) {
+    const content = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('active');
+
+    document.querySelectorAll('.compliance-header').forEach(h => {
+      h.classList.remove('active');
+      h.nextElementSibling.style.maxHeight = null;
+    });
+
+    if (!isOpen) {
+      btn.classList.add('active');
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+  }
+</script>
 
 <script type="text/javascript" src="https://lp.hyperelitedigital.shop/pretrack.js?rtkcmpid=6a69e0137ee2ba9843aa46dc"></script>
 </body>
