@@ -1,44 +1,42 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salute Oggi | Gli Scienziati Hanno Scoperto la Vera Causa del Diabete di Tipo 2</title>
+    <title>Tiszta Tekintet | Szemész Feltárja: A Látásvesztés Valódi Oka Évtizedekig Rejtve Volt</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            line-height: 1.7;
-            font-size: 17px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         .advertorial-bar {
             background-color: #2c3e50;
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            font-size: 0.85em;
+            font-size: 0.9em;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .container {
-            max-width: 780px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 32px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
         h1 {
             color: #d32f2f;
-            font-size: 1.95em;
+            font-size: 2.2em;
             text-align: center;
-            margin-bottom: 12px;
-            line-height: 1.25;
+            margin-bottom: 10px;
+            line-height: 1.2;
         }
         .deck {
             font-size: 1.05em;
@@ -47,50 +45,82 @@
             padding-left: 14px;
             margin: 12px 0 20px;
             font-style: italic;
-            line-height: 1.6;
-        }
-        .author-box {
-            background-color: #f9f9f9;
-            padding: 13px 15px;
-            border-left: 4px solid #2c3e50;
-            margin-bottom: 22px;
-            font-size: 0.88em;
-            color: #555;
+            line-height: 1.55;
         }
         h2 {
             color: #2c3e50;
-            font-size: 1.4em;
-            margin-top: 28px;
+            font-size: 1.5em;
+            margin-top: 30px;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
-            margin-bottom: 14px;
         }
-        p { margin-bottom: 16px; }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
         .image-link {
             display: block;
             text-align: center;
-            margin: 22px 0;
+            margin: 25px 0;
             transition: transform 0.2s ease;
         }
-        .image-link:hover { transform: scale(1.02); }
+        .image-link:hover {
+            transform: scale(1.02);
+        }
         .hero-image {
             width: 100%;
             max-width: 700px;
             height: auto;
+            border: 3px dashed #28a745;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             cursor: pointer;
         }
-        .pull-quote {
-            border-top: 2px solid #1a1a1a;
-            border-bottom: 2px solid #1a1a1a;
-            margin: 26px 0;
-            padding: 16px 20px;
-            font-size: 1.15em;
-            font-style: italic;
-            color: #1a1a1a;
-            line-height: 1.5;
+        .cta-button {
+            display: block;
+            width: 90%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 18px 20px;
+            background: linear-gradient(to bottom, #FFD700, #FFA500);
+            color: #000;
+            text-decoration: none;
+            font-size: 1.4em;
+            font-weight: 900;
+            border-radius: 8px;
             text-align: center;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            border: 2px solid #e69500;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .cta-button:hover {
+            background: linear-gradient(to bottom, #FFA500, #FF8C00);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        .author-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #2c3e50;
+            margin-bottom: 20px;
+        }
+        .author-info {
+            font-size: 0.9em;
+            color: #555;
         }
         .danger-box {
             background-color: #fff5f5;
@@ -99,7 +129,7 @@
             padding: 15px 20px;
             margin: 20px 0;
             font-size: 1em;
-            line-height: 1.65;
+            line-height: 1.6;
         }
         .danger-box strong { color: #d32f2f; }
         .highlight-box {
@@ -109,123 +139,69 @@
             padding: 15px 20px;
             margin: 20px 0;
             font-size: 1em;
-            line-height: 1.65;
+            line-height: 1.6;
         }
         .highlight-box strong { color: #7a5c00; }
-        .science-box {
-            background-color: #f0f4ff;
-            border: 1px solid #c5d3f0;
-            border-left: 5px solid #2c3e50;
-            padding: 15px 20px;
-            margin: 20px 0;
-            font-size: 1em;
-            line-height: 1.65;
-        }
-        .science-box strong { color: #2c3e50; }
-        .cta-button {
-            display: block;
-            width: 90%;
-            max-width: 500px;
-            margin: 30px auto;
-            padding: 20px 20px;
-            background: linear-gradient(to bottom, #FFD700, #FFA500);
-            color: #000;
-            text-decoration: none;
-            font-size: 1.3em;
-            font-weight: 900;
-            border-radius: 8px;
+        .pull-quote {
+            border-top: 2px solid #1a1a1a;
+            border-bottom: 2px solid #1a1a1a;
+            margin: 28px 0;
+            padding: 16px 20px;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #1a1a1a;
+            line-height: 1.45;
             text-align: center;
-            text-transform: uppercase;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            border: 2px solid #e69500;
-            animation: pulse 2s infinite;
-            line-height: 1.3;
-        }
-        .cta-button:hover {
-            background: linear-gradient(to bottom, #FFA500, #FF8C00);
-            transform: translateY(-2px);
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
-        .cta-sub {
-            text-align: center;
-            font-size: 0.82em;
-            color: #888;
-            margin-top: 8px;
         }
         .footer {
             background-color: #222;
             color: #aaa;
             text-align: center;
-            padding: 36px 20px;
-            font-size: 0.82em;
+            padding: 40px 20px;
+            font-size: 0.85em;
             margin-top: 40px;
         }
-        .footer-content { max-width: 780px; margin: 0 auto; }
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
         .disclaimer-box {
             border: 1px solid #444;
-            padding: 14px;
-            margin-bottom: 18px;
+            padding: 15px;
+            margin-bottom: 20px;
             text-align: justify;
             font-size: 0.8em;
             line-height: 1.4;
             background-color: #1a1a1a;
         }
-        .footer a { color: #ddd; text-decoration: none; margin: 0 10px; }
-        .footer a:hover { text-decoration: underline; color: #fff; }
-        .company-info { margin-top: 18px; font-weight: bold; color: #ccc; }
-        @media (max-width: 600px) {
-            .container { margin: 0; padding: 16px; border-radius: 0; }
-            h1 { font-size: 1.55em; }
-            .cta-button { font-size: 1.1em; width: 100%; }
-        }
-
-        /* ===== ACCORDION (Privacy Policy / Contact Us) ===== */
-        .compliance-accordion {
-            max-width: 780px;
-            margin: 28px auto 0;
-            padding: 0;
-            text-align: left;
-            font-family: Arial, sans-serif;
-        }
-        .compliance-item {
-            border: 1px solid #444;
-            border-radius: 6px;
-            margin-bottom: 10px;
-            overflow: hidden;
-            background: #1a1a1a;
-        }
-        .compliance-header {
-            width: 100%;
-            text-align: left;
-            background: #2a2a2a;
-            border: none;
-            padding: 14px 18px;
-            font-size: 0.9em;
-            font-weight: bold;
+        .footer a {
             color: #ddd;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            text-decoration: none;
+            margin: 0 10px;
         }
-        .compliance-header:hover { background: #333; }
-        .compliance-header .icon { font-size: 12px; transition: transform 0.2s; }
-        .compliance-header.active .icon { transform: rotate(180deg); }
-        .compliance-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.25s ease;
-            background: #161616;
+        .footer a:hover {
+            text-decoration: underline;
+            color: #fff;
         }
-        .compliance-content-inner {
-            padding: 16px 18px;
-            font-size: 0.82em;
-            color: #aaa;
-            line-height: 1.6;
+        .company-info {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #ccc;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                padding: 15px;
+                border-radius: 0;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .cta-button {
+                font-size: 1.1em;
+                width: 100%;
+                padding: 15px 10px;
+            }
         }
     </style>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -234,148 +210,112 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
 </head>
 <body>
-
-<div class="advertorial-bar">
-    ADVERTORIAL | CONTENUTO SPONSORIZZATO
-</div>
-
-<div class="container">
-
-    <h1>Ricercatori Hanno Scoperto: Un Piccolo Parassita nel Pancreas Potrebbe Essere la Vera Causa del Diabete di Tipo 2</h1>
-
-    <div class="deck">
-        Una scoperta scientifica sorprendente sta cambiando il modo in cui guardiamo al diabete. Se prende farmaci da anni ma la sua condizione non migliora — questa scoperta potrebbe spiegare quello che nessuno le ha mai detto.
+    <div class="advertorial-bar">
+        ADVERTORIAL | SZPONZORÁLT TARTALOM
     </div>
+    
+    <div class="container">
 
-    <div class="author-box">
-        <strong>Pubblicato:</strong> Oggi &nbsp;|&nbsp; <strong>Redazione Salute Oggi</strong> &nbsp;|&nbsp; Tempo di lettura: 2 minuti
-    </div>
+        <h1>Szemész Feltárja: A Látásvesztés Valódi Oka Évtizedekig Rejtve Volt — Egy Piros Gyökér Visszaadhatja Látását</h1>
 
-    <a href="https://lp.hyperelitedigital.shop/preclick" class="image-link">
-        <img src="./img/heroout.svg" alt="La vera causa del diabete" class="hero-image">
-    </a>
-
-    <p>Ogni mattina si sveglia e il primo pensiero è la glicemia. Metformina. Insulina. La lista degli alimenti vietati che diventa sempre più lunga. Le gambe che di notte fanno formicolio. Gli occhi che vedono sempre peggio. E quella paura silenziosa — non della morte, ma del giorno in cui non riuscirà più a fare nulla da solo.</p>
-
-    <p>Da anni le dicono che questa condizione è cronica. Che deve accettarla. Che i farmaci sono l'unica strada. <strong>Ma cosa succede se c'è una causa che le analisi di routine semplicemente non cercano?</strong></p>
-
-    <div class="science-box">
-        <strong>🔬 Quello che una recente scoperta scientifica rivela:</strong> I ricercatori hanno identificato un parassita — l'<em>Eurytrema pancreaticum</em> — capace di insediarsi nel pancreas umano. Lì provoca un'infiammazione cronica, danneggia le cellule produttrici di insulina e impedisce al pancreas di funzionare correttamente. <strong>Nessun esame di routine previsto dall'attuale protocollo diabetologico cerca questo parassita.</strong>
-    </div>
-
-    <h2>Perché la Sua Glicemia Non si Stabilizza Nonostante i Farmaci?</h2>
-
-    <p>La metformina e l'insulina regolano la glicemia — ma non agiscono su ciò che accade dentro il pancreas. Se l'<em>Eurytrema pancreaticum</em> è presente, continua a danneggiare le cellule responsabili della produzione di insulina. Il farmaco tratta la conseguenza. La causa continua ad agire.</p>
-
-    <p>Questo potrebbe spiegare quello che molti sperimentano: la glicemia si controlla per un periodo, poi servono dosi sempre maggiori. La condizione non si stabilizza mai del tutto. Non è una questione di forza di volontà o di dieta sbagliata.</p>
-
-    <div class="pull-quote">
-        "Quando abbiamo analizzato cosa impedisce al pancreas di funzionare normalmente nei diabetici, abbiamo trovato un pattern che la diagnostica tradizionale non cerca. Questo cambia il modo in cui guardiamo alla malattia."
-    </div>
-
-    <a href="https://lp.hyperelitedigital.shop/preclick" class="image-link">
-        <img src="./img/img2out.svg" alt="La scoperta e la soluzione" class="hero-image">
-    </a>
-
-    <a href="https://lp.hyperelitedigital.shop/preclick" class="cta-button">
-        ▶ GUARDA IL VIDEO ORA
-    </a>
-    <p class="cta-sub">Accesso gratuito · Disponibile per un tempo limitato</p>
-
-    <h2>Cosa Mostra Esattamente il Video?</h2>
-
-    <p>Due ricercatori — che hanno dedicato decenni allo studio delle malattie pancreatiche — presentano in un video dettagliato come questo parassita si insedia nel pancreas, perché rimane inosservato negli esami abituali, e perché nessun farmaco ipoglicemizzante può trattare ciò che questo organismo causa.</p>
-
-    <div class="highlight-box">
-        <strong>Cosa trova nel video?</strong> La spiegazione scientifica completa del legame tra il parassita pancreatico e la resistenza all'insulina. Il motivo per cui non compare nella diagnostica standard. E un approccio naturale — illustrato nel video in dettaglio — applicabile a casa, senza prescrizione medica.
-    </div>
-
-    <div class="danger-box">
-        <strong>⚠ Importante:</strong> Queste informazioni non sostituiscono il parere medico. Ma se gestisce il diabete da anni e i risultati non la soddisfano — vale la pena guardare questo video prima di decidere il passo successivo.
-    </div>
-
-    <a href="https://lp.hyperelitedigital.shop/preclick" class="cta-button">
-        ▶ GUARDA IL VIDEO ORA
-    </a>
-    <p class="cta-sub">Accesso gratuito · Disponibile per un tempo limitato</p>
-
-</div>
-
-<div class="footer">
-    <div class="footer-content">
-        <div class="disclaimer-box">
-            <strong>AVVISO IMPORTANTE:</strong> Questo sito web non fa parte del sito Facebook né di Facebook Inc. Questo sito non è in alcun modo supportato da Facebook. Questo sito web e il suo contenuto hanno scopo esclusivamente informativo ed educativo. Le informazioni qui contenute non costituiscono consulenza medica. I risultati possono variare e non sono garantiti. <strong>La storia e le persone presentate nell'articolo hanno scopo illustrativo.</strong> Consultare sempre il proprio medico prima di iniziare qualsiasi nuovo programma per la salute.
+        <div class="deck">
+            Dr. Bush felfedezése megrázta az orvosi közösséget. A látásvesztés nem az öregedés elkerülhetetlen következménye — és egy furcsa természetes gyökér megállíthatja a folyamatot, mielőtt visszafordíthatatlanná válik. Mindent elmagyaráz egy ingyenes videó, amely hamarosan eltűnhet az internetről.
         </div>
-        <p>
-            <a href="./privacy.html">Informativa sulla privacy</a> |
-            <a href="./terms.html">Termini di utilizzo</a> |
-            <a href="mailto:contato@hyperelitedigital.com.br">Contatto</a>
-        </p>
-        <div class="company-info">
-            FONTS NEXUS LTDA<br>
-            CNPJ: 67.232.158/0001-68<br>
-            Brasil
-        </div>
-        <p style="margin-top: 18px;">&copy; 2025 Salute Oggi. Tutti i diritti riservati.</p>
 
-        <!-- ===== ACCORDION INSERIDO AQUI ===== -->
-        <div class="compliance-accordion">
-
-            <div class="compliance-item">
-                <button class="compliance-header" onclick="toggleAccordion(this)">
-                    Informativa sulla Privacy
-                    <span class="icon">▼</span>
-                </button>
-                <div class="compliance-content">
-                    <div class="compliance-content-inner">
-                        <p><strong>Informativa sulla Privacy</strong></p>
-                        <p>Fonts Nexus LTDA rispetta la privacy dei visitatori di questo sito. Le informazioni raccolte tramite moduli, cookie o strumenti di tracciamento vengono utilizzate esclusivamente per finalità di marketing, analisi delle campagne e miglioramento dell'esperienza dell'utente.</p>
-                        <p>Non vendiamo né condividiamo dati personali con terze parti al di fuori dei nostri partner pubblicitari e di analisi necessari al funzionamento delle campagne. L'utente può richiedere in qualsiasi momento la rimozione dei propri dati contattandoci attraverso i canali indicati nella sezione Contatti.</p>
-                        <p>Questo sito utilizza cookie tecnici e di terze parti per il funzionamento delle campagne pubblicitarie. Continuando la navigazione, l'utente acconsente all'uso dei cookie secondo questa informativa.</p>
-                    </div>
-                </div>
+        <div class="author-box">
+            <div class="author-info">
+                <strong>Közzétéve:</strong> Ma | <strong>Szerző:</strong> Egészség és Tudomány Szerkesztőség | <strong>Olvasási idő:</strong> 3 perc
             </div>
-
-            <div class="compliance-item">
-                <button class="compliance-header" onclick="toggleAccordion(this)">
-                    Contatti
-                    <span class="icon">▼</span>
-                </button>
-                <div class="compliance-content">
-                    <div class="compliance-content-inner">
-                        <p><strong>Fonts Nexus LTDA</strong></p>
-                        <p>Email: contato@hyperelitedigital.com.br</p>
-                        <p>Indirizzo: Av. Dr. Jose Thomas D Avila Nabuco, 700, Apt 001 Bloco 08, Farolândia, Aracaju - SE, 49030-270, Brasile</p>
-                        <p>CNPJ: 67.232.158/0001-68</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
-        <!-- ===== FIM DO ACCORDION ===== -->
+
+        <a href="https://lp.callmeneira.shop/preclick" class="image-link">
+            <img src="./img/hero.webp" alt="Homályos látás szemüvegen keresztül" class="hero-image">
+        </a>
+
+        <p>Először nehéz elolvasni a feliratokat. Aztán a közlekedési táblák homályosak lesznek. Majd abbahagyja az éjszakai vezetést. És egy nap — észrevétlenül — valaki másnak kell kísérnie Önt, bárhová is megy.</p>
+
+        <p>A látásvesztés nem hirtelen következik be. Lassan, csendesen halad előre — míg egy reggel felébred és rájön, hogy már nem ismeri fel unokái arcát távolról, nem tudja elolvasni az orvosi receptet, mások döntenek helyette arról, hogy mit tehet és mit nem. És a legtragikusabb dolog? <strong>Ez nem elkerülhetetlen.</strong></p>
+
+        <div class="danger-box">
+            <strong>⚠ Amit egyetlen szemész sem mond el Önnek:</strong> A látásvesztés nem az öregedés természetes következménye. Egy pontosan meghatározott belső folyamat eredménye — amely megállítható, ha időben tudja, mit kell tennie.
+        </div>
+
+        <h2>A Felfedezés, Amely Mindent Megváltoztatott</h2>
+
+        <p>Dr. Bush szemész, évtizedes klinikai tapasztalattal, olyan kérdéseket kezdett feltenni, amelyeket kollégái soha nem tettek fel. Miért veszítik el egyesek gyorsan a látásukat, míg mások idős korukig tökéletes látással rendelkeznek? Mi a különbség a szemeikben?</p>
+
+        <p>Amit felfedezett, az megrázta az orvosi közösséget. Az Oxfordi Egyetem kutatói, több mint 12 000 beteget elemezve, megerősítették intuícióját: <strong>a látás minősége közvetlenül összefügg a szem apró ereinek állapotával.</strong> Amikor ezek az erek eltömődnek, a szem sejtjei nem kapnak elegendő oxigént és tápanyagot — és csendesen, napról napra pusztulni kezdenek.</p>
+
+        <div class="pull-quote">
+            "Nem az öregség miatt vesztettük el a látásunkat. Azért vesztettük el, mert senki sem vizsgálta, mi történik valójában a szem ereiben."
+        </div>
+
+        <p>A folyamat néma és fokozatos. Nem fáj. Nem ad nyilvánvaló jeleket, amíg a károsodás már előrehaladott. És minden egyes nap, amit cselekvés nélkül tölt, növeli az elpusztult sejtek számát — közeledve ahhoz a ponthoz, amelyen túl már nem lehet semmit tenni.</p>
+
+        <a href="https://lp.callmeneira.shop/preclick" class="image-link">
+            <img src="./img/img2.webp" alt="Emberi szem közelről" class="hero-image">
+        </a>
+
+        <h2>A Piros Gyökér Trükk — Amit az Optikai Ipar Nem Akar, Hogy Tudjon</h2>
+
+        <p>Ugyanebben a kutatásban Dr. Bush valami rendkívülit azonosított: egy egyszerű trükköt egy <strong>természetes piros gyökérrel</strong>, amely közvetlenül a szem apró ereire hat — feloldja az elzáródásokat, eltávolítja a felhalmozódott mérgező lerakódásokat, és lehetővé teszi, hogy a sejtek ismét oxigént és tápanyagot kapjanak.</p>
+
+        <p>A dokumentált eredmények meglepték magukat a kutatókat is: olyan betegek, akik már nem tudtak szemüveg nélkül olvasni, akiknek nehézségeik voltak a vezetéssel, akik elveszítették a képességet, hogy meglássák szeretteik arcát — már az első hetekben javulást tapasztaltak.</p>
+
+        <div class="highlight-box">
+            <strong>Miért nem beszél erről senki?</strong> Egy természetes gyökeret nem lehet szabadalmaztatni. Nem termel milliárdokat az optikai iparnak. Nem igényel drága szakorvosi látogatásokat vagy egyre erősebb szemüveget. És pontosan ezért az ipar azt részesíti előnyben, hogy Ön ezt soha ne tudja meg.
+        </div>
+
+        <p>Dr. Bush úgy döntött, hogy nyilvánosságra hozza ezt a felfedezést egy <strong>ingyenes videóban</strong>, amely mindent részletesen elmagyaráz: honnan származik ez a gyökér, pontosan hogyan hat a szem ereire, és — ami a legfontosabb — hogyan kell helyesen alkalmazni a betegeknél dokumentált eredmények eléréséhez.</p>
+
+        <p><strong>Ez a videó minden, amire szüksége van.</strong> Nincs szükség időpontra, receptre vagy drága eljárásokra. Csak teljes körű információ — érthetően és hozzáférhetően elmagyarázva — hogy még ma cselekedni tudjon, mielőtt a károsodás visszafordíthatatlanná válik.</p>
+
+        <div class="danger-box">
+            <strong>⚠ Figyelmeztetés:</strong> A videó olyan információkat tartalmaz, amelyeket az optikai ipar egy része nem szeretne nyilvánosságra hozni. Nem garantált, hogy sokáig elérhető marad online. Ha itt van, nézze meg most — ne halassza holnapra azt, ami a látásáról és függetlenségéről szól.
+        </div>
+
+        <a href="https://lp.callmeneira.shop/preclick" class="cta-button">NÉZZE MEG AZ INGYENES VIDEÓT MOST</a>
 
     </div>
-</div>
 
-<script>
-  function toggleAccordion(btn) {
-    const content = btn.nextElementSibling;
-    const isOpen = btn.classList.contains('active');
-
-    document.querySelectorAll('.compliance-header').forEach(h => {
-      h.classList.remove('active');
-      h.nextElementSibling.style.maxHeight = null;
-    });
-
-    if (!isOpen) {
-      btn.classList.add('active');
-      content.style.maxHeight = content.scrollHeight + 'px';
-    }
-  }
-</script>
-
-<script type="text/javascript" src="https://lp.hyperelitedigital.shop/pretrack.js?rtkcmpid=6a69e0137ee2ba9843aa46dc"></script>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="disclaimer-box">
+                <strong>FONTOS FIGYELMEZTETÉS:</strong> Ez a weboldal nem része a Facebook weboldalának vagy a Facebook Inc.-nek. Továbbá ezt a weboldalt a Facebook SEMMILYEN módon nem támogatja. A FACEBOOK a FACEBOOK, Inc. védjegye. Ez a weboldal és annak tartalma kizárólag tájékoztató és oktatási célokat szolgál. Az itt található információk nem tekinthetők orvosi tanácsnak, és nem helyettesítik a képzett egészségügyi szakemberrel való konzultációt. Az eredmények esetenként eltérőek lehetnek, és nem garantáltak. Mindig konzultáljon orvosával, mielőtt bármilyen új egészségügyi rendszert elkezdene.
+            </div>
+            
+            <p>
+                <a href="./privacy.html">Adatvédelmi irányelvek</a> | 
+                <a href="./terms.html">Felhasználási feltételek</a> | 
+                <a href="mailto:contato@girassolinsumos.com.br">Kapcsolat</a>
+            </p>
+            
+            <div class="company-info">
+                GIRASSOL COMERCIO DE INSUMOS LTDA<br>
+                CNPJ: 31.710.346/0001-07<br>
+                Rua Cruzeiro do Sul, 454 - Gradim, São Gonçalo - RJ, 24430-620
+            </div>
+            
+            <p style="margin-top: 20px;">&copy; 2024 Minden jog fenntartva.</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://lp.callmeneira.shop/pretrack.js?rtkcmpid=6a72562958d36ad95550f6a9"></script>
 </body>
 </html>
